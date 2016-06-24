@@ -1,0 +1,40 @@
+<html ng-app="app">
+    <head>
+        <!-- Angular Material style sheet -->
+        <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
+        
+        <link rel="stylesheet" href="../dist/scss/style1.css">
+       
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+        <script src="http://angular-ui.github.io/ui-router/release/angular-ui-router.min.js"></script>
+        
+        <!-- Angular Material requires Angular.js Libraries -->
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+
+        <!-- Angular Material Library -->
+        <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
+        
+        <!--build:js app/dist/js/main.min.js -->
+            <script src="app.js"></script>
+            <script src="app.config.js"></script>
+
+            <script src="customer/customer.controller.js"></script>
+            <script src="customer/customer.service.js"></script>
+
+            <script src="mydeal/mydeal.controller.js"></script>
+            <script src="mydeal/mydeal.service.js"></script>
+        <!-- endbuild -->
+        
+    </head>
+    <body>
+        <md-content>
+            <md-tabs  md-dynamic-height md-border-bottom>
+                <md-tab label="Mydeal2" ui-sref="Mydeal"></md-tab>
+                <md-tab label="Customer" ui-sref="Customer"> </md-tab>
+            </md-tabs>
+        </md-content>
+        <ui-view></ui-view>
+    </body>
+</html>
