@@ -5,6 +5,8 @@
         .module('app')
         .factory('CustomerService', CustomerService);
     
+    CustomerService.$inject = [];
+    /* @ngInject */
     function CustomerService(){
         var service = {
             

@@ -3,7 +3,12 @@
     
     angular
         .module('app')
-        .config(['$urlRouterProvider', '$stateProvider', function appConfig($urlRouterProvider, $stateProvider){
+        .config(appConfig);
+    
+    
+    appConfig.$inject = ['$urlRouterProvider', '$stateProvider'];
+    /* @ngInject */
+    function appConfig($urlRouterProvider, $stateProvider){
         $stateProvider
         .state('Mydeal', {
             url: '/mydeal',
@@ -18,6 +23,6 @@
         })
         
         $urlRouterProvider.otherwise('/customer')
-    }]);
+    }
                 
 }());

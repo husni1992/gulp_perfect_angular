@@ -6,7 +6,11 @@
             'ui.router',
             'ngMaterial'
         ])
-    .run(function($rootScope, $state){
+    .run(appRun);
+    
+    appRun.$inject = ['$rootScope', '$state'];
+    /* @ngInject */    
+    function appRun($rootScope, $state){
         $rootScope.state = $state;
-    })
+    }
 }());

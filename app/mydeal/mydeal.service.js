@@ -5,6 +5,8 @@
         .module('app')
         .factory('MydealService', MydealsService);
     
+    MydealsService.$inject = [];
+    /* @ngInject */
     function MydealsService(){
         var service = {
             
